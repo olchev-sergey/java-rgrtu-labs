@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>опросики</title>
+</head>
+<body>
+<h1>Опросики :)</h1>
+<img th:src="@{/images/hobby.jpg}"/>
+
+
+<form method="POST" th:action="@{/logout}" id="logoutForm">
+    <input type="submit" value="Logout"/>
+</form>
+
+<form th:method="POST" th:object="${design}" th:action="@{/design}" id="drugForm">
+
+    <span class="validationError"
+          th:if="${#fields.hasErrors('hobbies')}"
+          th:errors="*{getHobbies}">Hobby Error</span>
+
+    <div class="grid">
+
+        <div class="ingredient-group" id="kind">
+            <h3>Какое вид хобби предпочитаете:</h3>
+            <div th:each="hobby : ${kind}">
+                <input name="hobbies" type="checkbox" th:value="${hobby.id}" />
+                <span th:text="${hobby.name}">HOBBY</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="busyness">
+            <h3>Сколько времени хотели б уделять:</h3>
+            <div th:each="hobby : ${busyness}">
+                <input name="hobbies" type="checkbox" th:value="${hobby.id}" />
+                <span th:text="${hobby.name}">HOBBY</span><br/>
+            </div>
+        </div>
+
+        <div class="ingredient-group" id="suppose_start_time">
+            <h3>Когда планируете начать заниматься:</h3>
+            <div th:each="hobby : ${suppose_start_time}">
+                <input name="hobbies" type="checkbox" th:value="${hobby.id}" />
+                <span th:text="${hobby.name}">HOBBY</span><br/>
+            </div>
+        </div>
+
+        <h3>Ваш псевдоним:</h3>
+        <input type="text" th:field="*{name}"/>
+        <!-- end::all[] -->
+        <span th:text="${#fields.hasErrors('name')}">XXX</span>
+        <span class="validationError"
+              th:if="${#fields.hasErrors('name')}"
+              th:errors="*{name}">Name Error</span>
+        <!-- tag::all[] -->
+        <br/>
+
+        <button>Подтвердить и перейти к получению подарка</button>
+    </div>
+</form>
+</body>
+</html>

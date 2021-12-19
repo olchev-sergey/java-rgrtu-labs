@@ -1,0 +1,4 @@
+
+h
+java:S2786"RRemove this redundant "static" qualifier; nested enum types are implicitly static.(Ğ«“„
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨•øÄûÿÿÿÿ

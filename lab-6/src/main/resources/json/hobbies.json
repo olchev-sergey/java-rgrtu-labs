@@ -1,0 +1,26 @@
+[
+  {
+    "name": "serje",
+    "typeHobby": "sport",
+    "interviewee": "dasha",
+    "timestamp": "2018-04-25 13:57:36 +0700"
+  },
+  {
+    "name": "sasha",
+    "typeHobby": "sport",
+    "interviewee": "casha",
+    "timestamp": "2020-04-25 09:02:04 +0700"
+  },
+  {
+    "name": "casha",
+    "typeHobby": "creation",
+    "interviewee": "masha",
+    "timestamp": "2020-04-25 09:02:04 +0700"
+  },
+  {
+    "name": "masha",
+    "typeHobby": "self-education",
+    "interviewee": "sasha",
+    "timestamp": "2021-04-25 09:02:04 +0700"
+  }
+]

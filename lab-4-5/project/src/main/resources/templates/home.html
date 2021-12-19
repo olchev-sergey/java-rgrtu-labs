@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Опросики</title>
+</head>
+<body>
+    <h1 align="center">Добро пожаловать в онлайн опросник</h1>
+    <form method="POST" th:action="@{/logout}" id="logoutForm">
+        <input th:href = "@{/discountList}" type="submit" value="Logout"/>
+    </form>
+
+    <a th:href="@{/design}" id="design">Пройди опрос и получи подарок</a>
+    <img th:src="@{/images/hobby.jpg}"/>
+</body>
+</html>

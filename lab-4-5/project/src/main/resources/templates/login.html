@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+</head>
+<body>
+<h1>Вход</h1>
+<img th:src="@{/images/hobby.jpg}"/>
+
+<div th:if="${error}">
+   <a> Не удалось войти в систему. Проверьте свое имя пользователя и пароль.</a>
+</div>
+
+<p>Вы здесь впервые? Нажмите
+    <a th:href="@{/register}">ЗДЕСЬ</a> и зарегистрируйтесь.</p>
+
+<!-- tag::thAction[] -->
+<form method="POST" th:action="@{/login}" id="loginForm">
+    <!-- end::thAction[] -->
+    <label for="username">Имя пользователя: </label>
+    <input type="text" name="username"/><br/>
+
+    <label for="password">Пароль: </label>
+    <input type="password" name="password"/><br/>
+
+    <input type="submit" value="Войти"/>
+</form>
+</body>
+</html>
